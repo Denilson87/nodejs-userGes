@@ -1,0 +1,56 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/"><strong>Inicio</strong></a></li>
+    <li class="breadcrumb-item active" aria-current="page"><strong>Visualizar cliente</strong></li>
+  </ol>
+</nav>
+
+<div class="view-user p-5">
+  {{#each rows}}
+  <div class="row mb-5">
+    <div class="col text-center">
+      <h3>{{this.first_name}} {{this.last_name}}</h3>
+    </div>
+  </div>  
+  <div class="row">
+    <div class="col">
+      <table class="table">
+        <thead>
+          <tr>
+             
+            <th scope="col">Nome</th>
+            <th scope="col">Apelido</th>
+            <th scope="col">Email</th>
+            <th scope="col">Telefone</th>
+          </tr>
+        </thead>
+        <tbody>
+            {{#if this.profile_image}}
+      <img class="card__image" src="{{this.profile_image}}" loading="lazy" alt="User Profile">
+    {{else}}
+      <img class="card__image" style="border-radius: 60%; width:80px; margin-top:-80px;" src="https://www.tenforums.com/geek/gars/images/2/types/thumb_15951118880user.png" loading="lazy" alt="User Profile">
+    {{/if}} 
+          <tr>
+            <th scope="row">{{this.first_name}}
+                
+            </th>
+            <td>{{this.Last_name}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.phone}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row">
+      <div class="col">
+        <b>Commentarios</b>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        {{this.comments}}
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>

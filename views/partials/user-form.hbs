@@ -1,0 +1,41 @@
+
+
+<div class="col-6">
+    <div class="form-floating mb-3">
+      <input type="file" class="form-control" id="floatingInput" value="" placeholder="" accept="image/*" name="profile_image">
+      <label for="floatingInput">Imgem</label>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" value="{{this.first_name}}" placeholder="First Name" name="first_name">
+      <label for="floatingInput">Nome</label>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" value="{{this.Last_name}}" placeholder="Last Name" name="last_name">
+      <label for="floatingInput">Apelido</label>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="floatingInput" value="{{this.email}}" placeholder="email@email.com" name="email">
+      <label for="floatingInput">Email</label>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" value="{{this.phone}}" placeholder="Phone" name="phone">
+      <label for="floatingInput">Telefone</label>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="form-floating mb-3">
+      <textarea class="form-control" placeholder="Leave a comment here" id="comments" name="comments" style="height: 200px">{{this.comments}}</textarea>
+      <label for="comments">Commentarios/Notas</label>
+    </div>
+  </div>
+  <div class="col-12 d-grid">
+    <button class="btn btn-success" type="submit">Salvar <i class="bi bi-pencil"></i></button>
+  </div>
