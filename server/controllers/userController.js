@@ -53,7 +53,7 @@ exports.create = (req, res) => {
     } else {
       console.log(err);
     }
-    console.log('The data from user table: \n', rows);
+    console.log('Data pulled from user table: \n', rows);
   });
 }
 
